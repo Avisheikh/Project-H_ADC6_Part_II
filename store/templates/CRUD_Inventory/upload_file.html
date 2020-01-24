@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/admin_style.css" %}">
+    <link rel="stylesheet" href="{% static "css/css.css" %}">
+    <link rel="stylesheet" href="{% static "css/icon.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+
+    <title>SkullCandy</title>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img src="{% static "img/logo.png" %}" alt="SkullCandy" style="width:10rem; height:2rem;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'admin' %}">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'store' %}"></a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0" method="GET" action="/store/admin_products/search/">
+                <input class="form-control mr-sm-2" name="searchs"  placeholder="Enter Product Name or Category" style="width: 17.5rem;">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+          <br>
+
+        <div class="container">
+            <form method="POST" value="upload_file/uploaded/" enctype="multipart/form-data">
+                
+                {% csrf_token %}
+                <p class="h4 mb-4">Update Product</p>
+
+    <div class="form-group " ><!-- form-group Starts -->
+
+        <label class="col-md-3 control-label" > File Name </label>
+        <input type="text" name="file" class="form-control" required >
+        <br>
+        <label class="col-md-3 control-label" > File Format  </label>
+        <input type="text" name="format" class="form-control" required >
+        <br>
+        <input type="file" name="document" required><br><br>
+        <button class="btn btn-success" type="submit">Upload File</button><br>
+    </div>
+    <button class="btn btn-danger"><a class="text-white " href="/store/admin_products/uploaded_file/"> Back </a></button>
+        
+        
+
+   
+    <!-- Sign in button
+    <button class="btn btn-info btn-block my-4" type="submit">Upload</button>
+                <label>File Name</label>
+                <input type="text" name="file" required>
+                
+                <input type="file" name="document" required>
+                <button type="submit">Upload File</button>
+            </form>
+        </div>
+    </header>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Manage <b>Products</b></h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="upload/" ><span class="btn btn-success">Add Product</span></a>
+                        <a href="/store/admin_products/upload_file/" ><span class="btn btn-success">Upload/Download File</span></a>
+                           
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>File_Name</th>
+                        <th>Downloads</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for y in lists %}
+                    <tr>
+                        <td>{{y.File_Name}}</td>
+                        <td>
+                        <a href="{{ y.pdf.url }}" class="btn btn-primary btn-sm">Download File</a>   
+                        </td> 
+                    </tr>
+                    {% endfor %}
+            
+                </tbody>
+            </table> -->
+
+    <!-- <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>File_Name</th>
+                <th>Downloads</th>   
+            </tr>
+        </thead>
+        <tbody>
+            {% for y in lists %}
+            <tr>
+                <td>{{y.File_Name}}</td>
+                <td>
+                <a href="{{ y.pdf.url }}" class="btn btn-primary btn-sm">Download File</a>   
+                </td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> -->
+    
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <!-- Footer -->
+        <footer class="page-footer font-small bg-dark text-white">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright: Project-H (David Tamang, Asish
+                Parajuli, Abishek Bhandari) Special Thanks To :- Raj Parsad Shrestha
+            <a href="Heraldcollege.edu.np"> && Herald College</a>
+            </div>
+            <!-- Copyright -->
+        
+        </footer>
+        <!-- Footer -->
+        </footer>
+        <!-- Footer -->
+
+
+
+    <script src="{% static "js/bootstrap.min.js" %}">
+    
+    
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

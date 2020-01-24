@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/admin_style.css" %}">
+    <link rel="stylesheet" href="{% static "css/css.css" %}">
+    <link rel="stylesheet" href="{% static "css/icon.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+
+    <title>SkullCandy</title>
+    
+</head>
+<body>
+    <header>
+            
+        <!-- Default form login -->
+<form class="text-center border border-light p-5" method="POST" action="update/{{product.id}}">
+        {% csrf_token %}
+    <p class="h4 mb-4">Update Product</p>
+
+    <div class="form-group " ><!-- form-group Starts -->
+
+        <label class="col-md-3 control-label" > Product Name </label>
+        <input type="text" name="name" class="form-control" required >
+
+        <label class="col-md-3 control-label" > Product Type  </label>
+        <input type="text" name="type" class="form-control" required >
+
+        <label class="col-md-3 control-label" > Product Price </label>
+        <input type="number" name="price" class="form-control" required >
+
+        <label class="col-md-3 control-label" > Product Quantity </label>
+        <input type="number" name="qty" class="form-control" required >
+        
+        
+
+   
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Update</button>
+
+   
+
+</form>
+<!-- Default form login -->
+    </header>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <!-- Footer -->
+        <footer class="page-footer font-small bg-dark text-white">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright: Project-H (David Tamang, Asish
+                Parajuli, Abishek Bhandari) Special Thanks To :- Raj Parsad Shrestha
+            <a href="Heraldcollege.edu.np"> && Herald College</a>
+            </div>
+            <!-- Copyright -->
+        
+        </footer>
+        <!-- Footer -->
+        </footer>
+        <!-- Footer -->
+
+
+
+    <script src="{% static "js/bootstrap.min.js" %}">
+    
+    
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

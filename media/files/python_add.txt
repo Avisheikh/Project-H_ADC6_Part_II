@@ -1,0 +1,5 @@
+ product = product.objects.get(id=1)
+cart = cart()
+cart.products.add(product)
+cart.save()
+cart.products.add(product)

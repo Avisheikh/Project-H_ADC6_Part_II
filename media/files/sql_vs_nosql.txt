@@ -1,0 +1,12 @@
+difference betwee
+sql :-retlation in nature 
+no  :-non relation
+
+sql:fixed and rigid schemes
+no : dynamic schemes
+
+sql: normalizaton reqauiresd
+no:normallization is not required because data are store in object
+
+sql: query optimaztion is slower because of multiple relationship betw entities
+no : no relationshipp is required query faster

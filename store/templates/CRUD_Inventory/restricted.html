@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/admin_style.css" %}">
+    <link rel="stylesheet" href="{% static "css/css.css" %}">
+    <link rel="stylesheet" href="{% static "css/icon.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+
+    <title>SkullCandy</title>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "img/logo.png" %}" alt="SkullCandy" style="width:10rem; height:2rem;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'admin' %}">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">BACK<span class="sr-only">(current)</span></a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'store' %}"></a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0" method="GET" action="/store/admin_products/search/">
+                <input class="form-control mr-sm-2" name="searchs"  placeholder="Enter Product Name or Category" style="width: 17.5rem;">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+          <br><br>
+          <br><br>
+          <br><br>
+          <br><br>
+    
+        <h1 style="color: red; text-align: center;">You Are Not Allowed To Visit This Page. Press Back To Go To Store. 
+            Only Authorized User Can Access This Page.</h1>
+    
+        
+
+       
+       
+
+
+    </header>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <!-- Footer -->
+        <footer class="page-footer font-small bg-dark text-white">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright: Project-H (David Tamang, Asish
+                Parajuli, Abishek Bhandari) Special Thanks To :- Raj Parsad Shrestha
+            <a href="Heraldcollege.edu.np"> && Herald College</a>
+            </div>
+            <!-- Copyright -->
+        
+        </footer>
+        <!-- Footer -->
+        </footer>
+        <!-- Footer -->
+
+
+
+    <script src="{% static "js/bootstrap.min.js" %}">
+    
+    
+    </script>
+
+</body>
+</html>
